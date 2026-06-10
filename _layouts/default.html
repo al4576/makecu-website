@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   {% include head.html %}
 
   <body{% if page.custom_class %} class="{{ page.custom_class }}"{% endif %}>
@@ -7,14 +7,17 @@
 
     {{ content }}
 
-    <section class="footer">
-      <div class="container text-center">
-        <h1>{{ site.event.name }}</h1>
-        <h3>&copy; 2016 {{ site.event.name }}. Template by <a href="https://github.com/nlaz">Niko Lazaris</a>.</h3>
+    <footer class="footer">
+      <div>
+        <strong>{{ site.event.name }} 2026</strong>
+        <span>{{ site.event.date }} at {{ site.event.location }}</span>
       </div>
-    </section>
-
-    <script src="{{ '/js/jquery-1.11.3.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+      <div class="footer-links">
+        <a href="https://mlh.io/code-of-conduct">Code of Conduct</a>
+        <a href="{{ site.event.sponsor_interest_url }}">Sponsor placeholder</a>
+        <a href="mailto:{{ site.event.email }}">Contact</a>
+      </div>
+    </footer>
 
     {% include analytics/google_analytics.html ga_id=site.tracking.google_analytics %}
   </body>

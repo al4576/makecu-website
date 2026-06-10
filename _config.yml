@@ -1,120 +1,177 @@
-# --------------
-# -- Settings --
-# --------------
+baseurl: ""
+url: "https://makecu.dev"
 
-# If you are hosting in a sub-folder, for example: https://mlh.github.io/mlh-hackathon-boilerplate/,
-# you must specify it as the baseurl
-# If you hosting as a root, for example: htttps://[github username].github.io, then leave it blank
-baseurl: "/mlh-hackathon-boilerplate"
-
-# uncomment the next line if you are hosting as a root and not sub-folder
-# for example, when runnig locally at http://127.0.0.1:4000/
-# baseurl: ""
-
-# If you're using GitHub pages without a custom domain, this is "https://[github username].github.io"
-# If you're using GitHub pages with a custom domain, this is "http://[your domain]" (or https if you're using SSL)
-url: "https://mlh.github.io"
-
-# The ability to use custom themes.
 style:
-  theme: "original"
+  theme: "makecu"
 
-# This will help you track who's visiting your website.
 tracking:
-  google_analytics: "UA-43729070-14"
+  google_analytics: ""
 
-# Let people connect & engage with you through social media.
 social:
   twitter_handle: "MLHacks"
 
-# This is Search Engine Optimization. It'll help your website look better on search.
 seo:
-  title:       "Example Hacks | 5-6 August 2022"
-  description: "This is a sample hackathon website that you can use by following instructions on GitHub."
-  image:       "https://prime.mlh.io/img/logos/mlh-prime-color.svg"
+  title: "MakeCU 2026 | Columbia University Robotics Club"
+  description: "MakeCU is Columbia University Robotics Club's 24-hour hardware hackathon, returning November 7-8, 2026 at Carleton Commons."
+  image: ""
 
-# Event information.
 event:
-  name:        "Example Hacks"
-  description: "This is a sample hackathon website that you can use by following instructions on GitHub."
-  date:        "5 - 6 August 2022"
-  location:    "Holmdel, NJ, United States"
+  name: "MakeCU"
+  description: "Columbia University Robotics Club's 24-hour hardware hackathon for students who want to design, prototype, and demo real hardware projects."
+  date: "November 7-8, 2026"
+  location: "Carleton Commons"
+  email: "makecu-placeholder@columbiarobotics.club"
+  registration_url: "#registration"
+  sponsor_interest_url: "mailto:makecu-placeholder@columbiarobotics.club?subject=MakeCU%202026%20sponsorship%20interest"
+  mentor_interest_url: "mailto:makecu-placeholder@columbiarobotics.club?subject=MakeCU%202026%20mentor%20or%20judge%20interest"
+  discord_url: "#contact"
 
   trust_badge:
-    year:   "2017"  # season year
-    region: "eu"    # "na" or "eu"
-    color:  "white" # "white", "black", "gray", "red", "blue" or "yellow"
+    year: "2026"
+    region: "na"
+    color: "white"
 
-  hero:
-    links:
-      - text: "Apply"
-        my_mlh:
-          client_id:    "0e2f9fc2921d3ad3e12ae900af630d09382e1b3dc1b5b50de2b01b70ad64dbee"
-          redirect_uri: "https://mlh.github.io/mlh-hackathon-boilerplate/success.html"
-      - text: "Sponsor"
-        href: "mailto:sponsorship@website.com"
+  facts:
+    - label: "When"
+      value: "Nov. 7-8, 2026"
+    - label: "Where"
+      value: "Carleton Commons"
+    - label: "Format"
+      value: "In-person hardware"
+    - label: "Teams"
+      value: "Placeholder: 1-4 students"
 
   about:
     description: >
-      Example Hacks is a hackathon hosted at The University of Example.
-      This is your opportunity to describe your event, what to expect, where it is & anything unique to your event.
-      Keep it straightforward, don't make it too long.
+      MakeCU is a weekend-long hardware hackathon organized by Columbia University Robotics Club.
+      Students collaborate on hands-on projects that combine mechanical design, electronics,
+      embedded software, and creative problem solving. The 2026 site should stay honest while
+      planning is underway: registration, exact venue rooms, sponsor names, hardware inventory,
+      prizes, judges, and training links are placeholders until confirmed.
 
-  # Info Sections
+      Beginners are welcome. The goal is to make hardware feel approachable through workshops,
+      mentors, team formation, and a supportive environment for building something demoable by
+      the end of the weekend.
+
   info:
     sections:
-      - image: "images/image1.png"
-        title: "LEARN."
-        description: >
-          We can write something nice with a graphic (as above) to make the event more appealing.
-      - image: "images/image2.png"
-        title: "BUILD."
-        description: >
-          We can write something nice with a graphic (as above) to make the event more appealing.
-      - image: "images/image3.png"
-        title: "SHARE."
-        description: >
-          We can write something nice with a graphic (as above) to make the event more appealing.
+      - image: "/images/image1.png"
+        title: "Learn"
+        description: "Placeholder workshops for makerspace safety, microcontrollers, CAD, sensors, fabrication, and hardware debugging."
+      - image: "/images/image2.png"
+        title: "Build"
+        description: "Prototype with supplied and participant-owned hardware. Final inventory and equipment policies will be confirmed closer to the event."
+      - image: "/images/image3.png"
+        title: "Demo"
+        description: "Present projects to peers, mentors, and judges. Tracks, prizes, judging criteria, and sponsor challenges are to be announced."
 
-  # Frequently asked questions.
+  training:
+    total: 8
+    progress: "0%"
+    intro: "Complete these checklist items before the hackathon to prepare for makerspace access, hardware checkout, and event logistics."
+    links:
+      - text: "Columbia Makerspace info"
+        href: "https://make.columbia.edu/"
+      - text: "Barnard Design Center info"
+        href: "https://design.barnard.edu/"
+    groups:
+      - title: "General Makerspace Training"
+        completed: "0/3"
+        items:
+          - title: "Makerspace: Getting Started"
+            kind: "Guide"
+            href: "https://make.columbia.edu/"
+          - title: "Makerspace onboarding video"
+            kind: "Video"
+            href: "#hardware"
+          - title: "Onboarding quiz"
+            kind: "Quiz"
+            href: "#hardware"
+      - title: "Specialized Equipment Training"
+        completed: "0/5"
+        items:
+          - title: "3D printer training videos"
+            kind: "Video"
+            href: "#hardware"
+          - title: "3D printer quiz"
+            kind: "Quiz"
+            href: "#hardware"
+          - title: "Laser cutter video"
+            kind: "Video"
+            href: "#hardware"
+          - title: "Laser cutter quiz"
+            kind: "Quiz"
+            href: "#hardware"
+          - title: "Embroidery machine quiz"
+            kind: "Quiz"
+            href: "#hardware"
+
+  schedule:
+    - time: "Saturday morning"
+      title: "Check-in and opening ceremony"
+      description: "Placeholder for registration, team formation, safety notes, and opening remarks."
+    - time: "Saturday afternoon"
+      title: "Workshops and hacking"
+      description: "Placeholder for training sessions, mentor office hours, and hardware checkout."
+    - time: "Saturday night"
+      title: "Build through the evening"
+      description: "Placeholder for meals, activities, and overnight building policy."
+    - time: "Sunday morning"
+      title: "Final hacking and submissions"
+      description: "Placeholder for submission deadline, demo prep, and project showcase logistics."
+    - time: "Sunday afternoon"
+      title: "Demos and awards"
+      description: "Placeholder for judging, closing ceremony, prize announcements, and cleanup."
+
+  sponsors:
+    - tier: "Platinum"
+      placeholders:
+        - "Sponsor logo placeholder"
+        - "Sponsor logo placeholder"
+    - tier: "Gold"
+      placeholders:
+        - "Sponsor logo placeholder"
+        - "Sponsor logo placeholder"
+        - "Sponsor logo placeholder"
+    - tier: "Community"
+      placeholders:
+        - "Campus partner placeholder"
+        - "Food partner placeholder"
+
   faq:
-    - question: "What is a hackathon?"
-      answer: >
-        A hackathon is an invention marathon. Students come together to build cool
-        software & hardware hacks over 24-48 hours. It's [very beginner friendly](https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.cj21niskl).
-    - question: "How much does it cost?"
-      answer: >
-        Nothing. Attending a hackathon is free.
-    - question: "Do I need to be a student to attend?"
-      answer: >
-        Yes. Only students who are currently enrolled at a college/university or
-        have graduated within the past 12 months are eligible to attend.
+    - question: "Is MakeCU free to attend?"
+      answer: "Yes. Student hackathons are typically free for accepted hackers. Food, swag, hardware availability, and prizes should be updated once confirmed."
     - question: "Where is the event?"
-      answer: >
-        The event is being hosted at [insert venue location here].
-    - question: "What is Major League Hacking?"
-      answer: >
-        Major League Hacking is [the official student hackathon league](https://mlh.io) in North America & Europe.
-        We work with over 200 Member Events and empower over 70,000 students every year.
-    - question: "Is there a code of conduct?"
-      answer: >
-        Yes there is. We enforce it very strongly. You can [find it here](https://static.mlh.io/docs/mlh-code-of-conduct.pdf).
+      answer: "MakeCU 2026 is planned for Carleton Commons. Replace this with the exact check-in entrance, room map, accessibility details, and transit guidance once confirmed."
+    - question: "Who can attend?"
+      answer: "Placeholder: MakeCU is intended for student hackers. Confirm eligibility, age requirements, liability forms, and guest policies before publishing registration."
+    - question: "Do I need hardware experience?"
+      answer: "No. The site should keep highlighting that beginners are welcome, with workshops and mentors available to help participants learn during the event."
+    - question: "How large can teams be?"
+      answer: "Placeholder: teams of 1-4 students. Confirm this with the organizing team and MLH guidance before registration opens."
+    - question: "Will hardware be provided?"
+      answer: "Placeholder: hardware, tools, and makerspace access are to be announced. Add the final inventory, checkout rules, and safety restrictions as soon as they are available."
+    - question: "When can teams start building?"
+      answer: "Placeholder: projects should begin after the opening ceremony, and teams should clearly credit any pre-existing frameworks, parts, CAD files, or libraries they use."
+    - question: "How do I sign up as a mentor, judge, volunteer, or sponsor?"
+      answer: "Use the placeholder links on this page for now. Replace them with the official interest forms when they are ready."
+    - question: "What code of conduct applies?"
+      answer: "All participants should follow the [MLH Code of Conduct](https://mlh.io/code-of-conduct) and any additional Columbia University event policies."
+    - question: "Who should I contact?"
+      answer: "Replace the placeholder contact address with the official MakeCU organizer email before sharing the site publicly."
 
-  # This is the message you'll receive once you've registered.
   register:
-    message: >
-      You'll receive more information closer to the hackathon.
-
-# ----------------------------------------------------
-# -- Ignore this unless you know what you're doing. --
-# ----------------------------------------------------
+    message: "Registration details will be sent closer to MakeCU 2026."
 
 markdown: kramdown
 exclude:
- - node_modules
- - gulpfile.js
- - Gemfile
- - Gemfile.lock
- - package.json
- - README.md
- - CNAME
+  - node_modules
+  - vendor
+  - vercel.json
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - README.md
+  - DEPLOYMENT.md
+  - CNAME

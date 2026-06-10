@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.event.name }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.seo.title }}{% endif %}</title>
 
   <meta name="viewport"    content="width=device-width, initial-scale=1">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.seo.description }}{% endif %}">
@@ -24,14 +24,14 @@
   {% if site.seo.image %}<meta property="og:image" content="{{ site.seo.image }}" />{% endif %}
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,300italic,400italic,700italic" />
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" />
   <link rel="stylesheet" type="text/css" href="{{ '/css/bootstrap.min.css' | relative_url }}" />
   <link rel="stylesheet" type="text/css" href="{{ '/css/base.css' | relative_url }}" />
   <link rel="stylesheet" type="text/css" href="{{ '/css/' | relative_url }}{{ site.style.theme | append: '.css' }}" />
-  <!-- link rel="icon" href="/img/favicon.ico" -->
 
   <!-- Favicon -->
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="icon"      href="{{ '/images/favicon.ico' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
 </head>
