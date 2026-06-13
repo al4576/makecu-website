@@ -4,17 +4,16 @@
   --paper: #ebebeb;
   --panel: #ffffff;
   --line: #d0d0d0;
-  --green: #ff6700;
-  --green-dark: #00519a;
-  --blue: #3a6ea5;
-  --yellow: #3a6ea5;
-  --coral: #ff6700;
   --navy: #0b1f33;
   --orange: #ff6700;
   --blue-mid: #3a6ea5;
   --blue-dark: #00519a;
+  --blue-light: #B9D9EB;
   --shadow: 0 20px 50px rgba(17, 24, 39, 0.12);
   --soft-shadow: 0 12px 28px rgba(17, 24, 39, 0.09);
+  --font-heading: "Press Start 2P", monospace;
+  --font-ui: "Silkscreen", monospace;
+  --font-body: "DM Sans", Arial, sans-serif;
 }
 
 * {
@@ -29,7 +28,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "DM Sans", Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -80,7 +79,7 @@ a {
   align-items: center;
   color: var(--ink);
   display: inline-flex;
-  font-family: "Press Start 2P", monospace;
+  font-family: var(--font-heading);
   font-size: 14px;
   font-weight: 400;
   gap: 10px;
@@ -95,7 +94,7 @@ a {
 .footer a:focus,
 .inline-link:hover,
 .inline-link:focus {
-  color: var(--green-dark);
+  color: var(--blue-dark);
   text-decoration: none;
 }
 
@@ -250,17 +249,18 @@ a {
 
 .eyebrow,
 .section-kicker {
-  color: var(--green);
+  color: var(--blue-mid);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
+  font-family: var(--font-body);
 }
 
 .hero h1,
 .section h2,
 .contact h2 {
-  font-family: "Press Start 2P", monospace;
+  font-family: var(--font-heading);
   font-weight: 400;
   line-height: 1.4;
   margin: 0;
@@ -272,8 +272,8 @@ a {
 }
 
 .date-line {
-  color: var(--orange);
-  font-family: "Press Start 2P", monospace;
+  color: var(--blue-dark);
+  font-family: var(--font-heading);
   font-size: clamp(18px, 2.6vw, 32px);
   font-weight: 400;
   line-height: 1.5;
@@ -281,7 +281,7 @@ a {
 }
 
 .hero-copy {
-  font-family: "Silkscreen", monospace;
+  font-family: var(--font-body);
   font-size: clamp(14px, 1.8vw, 20px);
   font-weight: 400;
   line-height: 1.7;
@@ -325,16 +325,17 @@ a {
   min-height: 48px;
   padding: 12px 18px;
   text-decoration: none;
+  font-family: var(--font-body);
 }
 
 .button-primary {
-  background: var(--green);
+  background: var(--orange);
   color: #ffffff;
 }
 
 .button-primary:hover,
 .button-primary:focus {
-  background: var(--green-dark);
+  background: var(--blue-dark);
   color: #ffffff;
 }
 
@@ -344,10 +345,10 @@ a {
   color: var(--ink);
 }
 
+/* TODO: uh fix these buttons lol */
 .button-secondary:hover,
 .button-secondary:focus {
-  border-color: var(--green);
-  color: var(--green-dark);
+  color: var(--blue-dark);
 }
 
 .button-quiet {
@@ -378,6 +379,7 @@ a {
   position: relative;
   transform: translateY(-34px);
   z-index: 2;
+  font-family: var(--font-body);
 }
 
 .quick-facts article {
@@ -407,7 +409,7 @@ a {
 
 .quick-facts strong {
   display: block;
-  font-family: "Press Start 2P", monospace;
+  font-family: var(--font-heading);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -440,7 +442,7 @@ a {
 .contact p,
 .faq p {
   color: var(--muted);
-  font-family: "Silkscreen", monospace;
+  font-family: var(--font-body);
   font-size: 13px;
   line-height: 1.8;
 }
@@ -486,7 +488,7 @@ a {
 }
 
 .training-progress strong {
-  font-family: "Press Start 2P", monospace;
+  font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 400;
 }
@@ -504,7 +506,7 @@ a {
 }
 
 .progress-track span {
-  background: linear-gradient(90deg, var(--green), var(--yellow));
+  background: linear-gradient(90deg, var(--orange), var(--blue-mid));
   display: block;
   height: 100%;
 }
@@ -534,7 +536,7 @@ a {
 }
 
 .checklist-card h3 {
-  font-family: "Press Start 2P", monospace;
+  font-family: var(--font-heading);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
@@ -557,7 +559,7 @@ a {
 }
 
 .check-box {
-  border: 2px solid var(--green);
+  border: 2px solid var(--orange);
   border-radius: 5px;
   display: inline-block;
   height: 22px;
@@ -570,7 +572,7 @@ a {
 }
 
 .checklist-card a {
-  color: var(--green-dark);
+  color: var(--blue-dark);
   font-size: 14px;
   font-weight: 800;
 }
@@ -615,30 +617,30 @@ a {
     linear-gradient(0deg, transparent 0 30%, currentColor 30% 32%, transparent 32% 100%),
     linear-gradient(0deg, transparent 0 62%, currentColor 62% 64%, transparent 64% 100%),
     radial-gradient(circle at 14% 30%, currentColor 0 5px, transparent 6px),
-    radial-gradient(circle at 42% 62%, var(--yellow) 0 6px, transparent 7px),
-    radial-gradient(circle at 70% 30%, var(--blue) 0 5px, transparent 6px),
-    radial-gradient(circle at 86% 62%, var(--coral) 0 5px, transparent 6px);
+    radial-gradient(circle at 42% 62%, var(--blue-mid) 0 6px, transparent 7px),
+    radial-gradient(circle at 70% 30%, var(--blue-mid) 0 5px, transparent 6px),
+    radial-gradient(circle at 86% 62%, var(--orange) 0 5px, transparent 6px);
   border: 1px solid rgba(17, 24, 39, 0.1);
   border-radius: 8px;
-  color: var(--green);
+  color: var(--orange);
   height: 132px;
   opacity: 0.88;
   width: 170px;
 }
 
 .circuit-icon-2 {
-  color: var(--blue);
+  color: var(--blue-mid);
 }
 
 .circuit-icon-3 {
-  color: var(--coral);
+  color: var(--orange);
 }
 
 .feature-card h3,
 .timeline-item h3,
 .sponsor-tier h3,
 .faq summary {
-  font-family: "Press Start 2P", monospace;
+  font-family: var(--font-heading);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
@@ -667,7 +669,7 @@ a {
 }
 
 .timeline-item span {
-  color: var(--blue);
+  color: var(--blue-mid);
   font-weight: 800;
 }
 
@@ -746,29 +748,35 @@ a {
 }
 
 .inline-link {
-  color: var(--green-dark);
+  color: var(--blue-dark);
   display: inline-block;
   font-weight: 800;
   margin-top: 24px;
 }
 
+.faq.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .faq-list {
   display: grid;
-  gap: 12px;
-  margin-top: 34px;
+  gap: 4px;
+  margin-top: 18px;
 }
 
 .faq details {
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 22px 24px;
+  border-radius: 6px;
+  padding: 10px 14px;
 }
 
 .faq summary {
   cursor: pointer;
+  font-size: 12px;
   list-style: none;
-  padding-right: 30px;
+  padding-right: 24px;
   position: relative;
 }
 
@@ -777,12 +785,12 @@ a {
 }
 
 .faq summary::after {
-  color: var(--green);
+  color: var(--orange);
   content: "+";
-  font-size: 30px;
+  font-size: 18px;
   position: absolute;
   right: 0;
-  top: -4px;
+  top: -2px;
 }
 
 .faq details[open] summary::after {
@@ -790,7 +798,8 @@ a {
 }
 
 .faq p {
-  margin: 16px 0 0;
+  font-size: 12px;
+  margin: 8px 0 0;
 }
 
 .contact-panel {
